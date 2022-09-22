@@ -11,5 +11,6 @@ import roydon.xyz.mybatisplusdemo.entity.User;
  **/
 public interface UserMapper extends BaseMapper<User> {
 
-User getById(Long id);
+    User getById(Long id);
+
 }
