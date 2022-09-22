@@ -15,8 +15,13 @@ import org.springframework.context.annotation.Configuration;
 @MapperScan("roydon/xyz/mybatisplusdemo/mapper")
 public class MybatisPlusConfig {
 
+    /**
+     * page分页插件
+     * @return
+     */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();
     }
+
 }
