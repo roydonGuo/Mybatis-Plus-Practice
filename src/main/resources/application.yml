@@ -1,4 +1,3 @@
-
 server:
   port: 9898
 
@@ -12,8 +11,9 @@ spring:
 mybatis-plus:
   global-config:
     db-config:
-      id-type: auto # id????????????
+      id-type: auto # id自增长配置，不用再每个实体每个主键单独配置。
+#      table-prefix: tb_ # 表名前缀，相当于@TableName("tb_user")
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:mapper/*.xml  #????mybatis?xml??
-  type-aliases-package: roydon.xyz.mybatisplusdemo.entity # ?????????????
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #sql日志打印
+  mapper-locations: classpath:mapper/*.xml  #自定义方法映射的sqlmapper文件路径
+  type-aliases-package: roydon.xyz.mybatisplusdemo.entity
